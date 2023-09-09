@@ -15,6 +15,17 @@ struct Reminder: Identifiable {
     var isComplete: Bool = false
 }
 
+// Elaborate form: you can also write array extension like this
+// extension Array where Element == Reminder
+extension [Reminder] {
+    func indexOfReminder(withId id: Reminder.ID) -> Self.Index {
+        guard let index = firstIndex(where: { $0.id == id}) else {
+            fatalError()
+        }
+        return index
+    }
+}
+
 #if DEBUG
 extension Reminder {
     static var sampleData = [
