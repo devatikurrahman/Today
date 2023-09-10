@@ -92,9 +92,9 @@
 		6087E6652AA9EA18001B8B0C /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				6087E67A2AA9EF62001B8B0C /* Models */,
 				6087E6662AA9EA18001B8B0C /* AppDelegate.swift */,
 				6087E6682AA9EA18001B8B0C /* SceneDelegate.swift */,
+				6087E67A2AA9EF62001B8B0C /* Models */,
 				60006B072AACE6CE00E54DD7 /* ListViewController */,
 				6043E2FD2AAE10A10044A1E8 /* DetailViewController */,
 				6087E66C2AA9EA18001B8B0C /* Main.storyboard */,

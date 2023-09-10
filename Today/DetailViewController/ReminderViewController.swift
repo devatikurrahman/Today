@@ -35,6 +35,11 @@ class ReminderViewController: UICollectionViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
         
+        if #available(iOS 16, *) {
+            navigationItem.style = .navigator
+        }
+        navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
+        
         updateSnapshot()
     }
     
