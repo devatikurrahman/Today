@@ -29,6 +29,7 @@
 		6087E6732AA9EA1F001B8B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6087E6712AA9EA1F001B8B0C /* LaunchScreen.storyboard */; };
 		6087E67C2AAA21DB001B8B0C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6087E67B2AAA21DB001B8B0C /* Reminder.swift */; };
 		60D4A4F12AB17F0600E7EEC8 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4A4F02AB17F0600E7EEC8 /* ReminderListStyle.swift */; };
+		60D4A4F32AB2371100E7EEC8 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4A4F22AB2371100E7EEC8 /* ProgressHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		6087E6742AA9EA1F001B8B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6087E67B2AAA21DB001B8B0C /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		60D4A4F02AB17F0600E7EEC8 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
+		60D4A4F22AB2371100E7EEC8 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				6087E66A2AA9EA18001B8B0C /* ReminderListViewController.swift */,
+				60D4A4F22AB2371100E7EEC8 /* ProgressHeaderView.swift */,
 				60006B082AACE71100E54DD7 /* ReminderListViewController+DataSource.swift */,
 				60006B0E2AAD1FA800E54DD7 /* ReminderListViewController+Actions.swift */,
 				60006B0C2AAD1E6E00E54DD7 /* ReminderDoneButton.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D4A4F32AB2371100E7EEC8 /* ProgressHeaderView.swift in Sources */,
 				607B9B732AAF6BE600BC8435 /* UIView+PinnedSubview.swift in Sources */,
 				607B9B6E2AAF18B800BC8435 /* ReminderViewController+Section.swift in Sources */,
 				607B9B7B2AAFB18A00BC8435 /* DatePickerContentView.swift in Sources */,
