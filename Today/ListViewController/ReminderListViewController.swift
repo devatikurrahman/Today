@@ -21,10 +21,14 @@ class ReminderListViewController: UICollectionViewController {
     let listStyleSegmentedControl = UISegmentedControl(items: [
         ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name
     ])
+    
+    var headerView: ProgressHeaderView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        collectionView.backgroundColor = .todayGradientFutureBegin
         
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -35,6 +39,11 @@ class ReminderListViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+        }
+        
+        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+        dataSource.supplementaryViewProvider = { supplementaryView, elementKind, indexPath in
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_ :)))
@@ -71,6 +80,7 @@ class ReminderListViewController: UICollectionViewController {
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = false
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
         listConfiguration.backgroundColor = .clear
@@ -91,5 +101,8 @@ class ReminderListViewController: UICollectionViewController {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 
+    private func supplementaryRegistrationHandler(progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath) {
+        headerView = progressView
+    }
 }
 
