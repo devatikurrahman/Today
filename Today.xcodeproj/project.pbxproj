@@ -28,6 +28,7 @@
 		6087E6702AA9EA1F001B8B0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6087E66F2AA9EA1F001B8B0C /* Assets.xcassets */; };
 		6087E6732AA9EA1F001B8B0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6087E6712AA9EA1F001B8B0C /* LaunchScreen.storyboard */; };
 		6087E67C2AAA21DB001B8B0C /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6087E67B2AAA21DB001B8B0C /* Reminder.swift */; };
+		609AB0E72AB32CC400EFAFC6 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609AB0E62AB32CC400EFAFC6 /* CAGradientLayer+ListStyle.swift */; };
 		60D4A4F12AB17F0600E7EEC8 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4A4F02AB17F0600E7EEC8 /* ReminderListStyle.swift */; };
 		60D4A4F32AB2371100E7EEC8 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4A4F22AB2371100E7EEC8 /* ProgressHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		6087E6722AA9EA1F001B8B0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6087E6742AA9EA1F001B8B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6087E67B2AAA21DB001B8B0C /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		609AB0E62AB32CC400EFAFC6 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		60D4A4F02AB17F0600E7EEC8 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		60D4A4F22AB2371100E7EEC8 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 				60D4A4F02AB17F0600E7EEC8 /* ReminderListStyle.swift */,
 				60006B0A2AACED9D00E54DD7 /* UIColor+Today.swift */,
 				60006B052AACBD8500E54DD7 /* Date+Today.swift */,
+				609AB0E62AB32CC400EFAFC6 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				607B9B702AAF687300BC8435 /* ReminderViewController+CellConfiguration.swift in Sources */,
 				6087E6692AA9EA18001B8B0C /* SceneDelegate.swift in Sources */,
 				6087E67C2AAA21DB001B8B0C /* Reminder.swift in Sources */,
+				609AB0E72AB32CC400EFAFC6 /* CAGradientLayer+ListStyle.swift in Sources */,
 				60006B092AACE71100E54DD7 /* ReminderListViewController+DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
