@@ -85,6 +85,7 @@ extension ReminderListViewController {
             do {
                 try await reminderStore.requestAccess()
                 reminders = try await reminderStore.readAll()
+                NotificationCenter.default.addObserver(self, selector: #selector(eventStoreChanged(_:)), name: .EKEventStoreChanged, object: nil)
             } catch TodayError.accessDenied, TodayError.accessRestricted {
                 #if DEBUG
                 reminders = Reminder.sampleData
@@ -96,8 +97,15 @@ extension ReminderListViewController {
         }
     }
     
+    func reminderStoreChanged() {
+        Task {
+            reminders = try await reminderStore.readAll()
+            updateSnapshot()
+        }
+    }
+    
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
-        let name = NSLocalizedString("Toggle completeion", comment: "Reminder done button accessibility label")
+        let name = NSLocalizedString("Toggle completion", comment: "Reminder done button accessibility label")
         let action = UIAccessibilityCustomAction(name: name) { [weak self] action in
             self?.completeReminder(withId: reminder.id)
             return true
